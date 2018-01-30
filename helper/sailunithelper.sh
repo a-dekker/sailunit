@@ -54,7 +54,7 @@ get_units ()
             TYPE=$(echo ${NAME} | awk -F. '{print $NF}')
             NAME=${NAME%.*}
             echo "${PERSON};${TYPE};${STATE};${NAME}"
-        done < <(/bin/systemctl ${PARAM} list-unit-files ${UNITS}|head -n -2 | tail -n +2 | sort --ignore-case)
+        done < <(/bin/systemctl ${PARAM} list-unit-files ${UNITS}|head -n -2 | tail -n +2)
     done
 }
 
