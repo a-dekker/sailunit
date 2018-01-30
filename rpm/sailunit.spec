@@ -14,7 +14,7 @@ Name:       harbour-sailunit
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    View your unit files
 Version:    0.1
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    LICENSE
 URL:        https://github.com/a-dekker/sailunit

@@ -159,9 +159,9 @@ Page {
 
             function show_content() {
                 pageStack.push(Qt.resolvedUrl("ContentPage.qml"), {
-                                   u_owner: listUnitModel.get(index).unitOwner,
-                                   u_type: listUnitModel.get(index).unitType,
-                                   u_name: listUnitModel.get(index).unitName
+                                   u_owner: listUnitProxyModel.get(index).unitOwner,
+                                   u_type: listUnitProxyModel.get(index).unitType,
+                                   u_name: listUnitProxyModel.get(index).unitName
                                })
             }
 
