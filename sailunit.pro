@@ -18,6 +18,7 @@ translations.files = translations
 translations.path = $${DEPLOYMENT_PATH}
 
 CONFIG += sailfishapp
+CONFIG += c++11
 
 OTHER_FILES += qml/sailunit.qml \
     qml/cover/CoverPage.qml \
@@ -29,15 +30,22 @@ OTHER_FILES += qml/sailunit.qml \
     qml/pages/MainPage.qml \
     qml/pages/ContentPage.qml \
     qml/common/PageHeaderExtended.qml \
+    qml/common/SearchMenuItem.qml \
+    qml/common/SearchPanel.qml \
     helper/sailunithelper.sh \
     rpm/sailunit.spec
 
-# INSTALLS += translations
+INSTALLS += translations
 
-# TRANSLATIONS = translations/harbour-sailunit-nl.ts \
+TRANSLATIONS = translations/harbour-sailunit-nl.ts \
 
-TEMPLATE = subdirs
-SUBDIRS = src
+SOURCES += src/sailunit.cpp \
+    src/settings.cpp \
+    src/osread.cpp
+
+HEADERS += \
+    src/settings.h \
+    src/osread.h
 
 # only include these files for translation:
 lupdate_only {
@@ -65,3 +73,4 @@ INSTALLS += icon86 icon108 icon128 icon256 script
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+include(SortFilterProxyModel/SortFilterProxyModel.pri)

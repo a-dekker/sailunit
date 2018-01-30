@@ -8,5 +8,7 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Jan 29 2018 Arno Dekker <jack.tar@example.com> 0.0.1-1
+- Added search function
 * Mon Jan 8 2018 Arno Dekker <jack.tar@example.com> 0.0.1-0
 - Initial version

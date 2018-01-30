@@ -39,6 +39,7 @@ modification, are permitted provided that the following conditions are met:
 #include <qqml.h>
 #include <QtGui>
 #include <QQuickView>
+#include <QRegularExpression>
 #include "osread.h"
 #include "settings.h"
 

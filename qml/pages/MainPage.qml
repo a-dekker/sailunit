@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.sailunit.Launcher 1.0
+import SortFilterProxyModel 0.2
 import "../common"
 
 Page {
@@ -43,9 +44,12 @@ Page {
                              })
     }
 
-
     Component.onCompleted: {
         loadUnitInfo()
+    }
+
+    SearchPanel {
+        id: searchPanel
     }
 
     Item {
@@ -71,15 +75,24 @@ Page {
 
     SilicaListView {
         id: listUnit
-        anchors.fill: parent
 
+        anchors {
+            fill: parent
+            bottomMargin: 0
+            topMargin: searchPanel.visibleSize
+        }
+        clip: true
 
         header: Item {
+            id: header
             // This is just a placeholder for the header box. To avoid the
             // list view resetting the input box everytime the model resets,
             // the search entry is defined outside the list view.
-            height: headerBox.height
+            width: pageHeader.width
+            height: pageHeader.height
+            Component.onCompleted: pageHeader.parent = header
         }
+
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
@@ -110,12 +123,29 @@ Page {
                     loadUnitInfo()
                 }
             }
+            SearchMenuItem {
+            }
         }
         VerticalScrollDecorator {
         }
 
-        model: ListModel {
+        ListModel {
             id: listUnitModel
+        }
+
+        model: listUnitProxyModel
+
+        SortFilterProxyModel {
+            id: listUnitProxyModel
+            sourceModel: listUnitModel
+            filters: RegExpFilter {
+                roleName: "unitName"
+                pattern: searchPanel.searchText
+                caseSensitivity: Qt.CaseInsensitive
+            }
+            sorters: StringSorter {
+                roleName: "unitName"
+            }
         }
 
         ViewPlaceholder {
@@ -129,10 +159,10 @@ Page {
 
             function show_content() {
                 pageStack.push(Qt.resolvedUrl("ContentPage.qml"), {
-                    u_owner: listUnitModel.get(index).unitOwner,
-                    u_type: listUnitModel.get(index).unitType,
-                    u_name: listUnitModel.get(index).unitName
-                })
+                                   u_owner: listUnitModel.get(index).unitOwner,
+                                   u_type: listUnitModel.get(index).unitType,
+                                   u_name: listUnitModel.get(index).unitName
+                               })
             }
 
             Rectangle {
