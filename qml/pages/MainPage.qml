@@ -157,11 +157,12 @@ Page {
             id: listUnitItem
             menu: contextMenu
 
-            function show_content() {
+            function show_content(action) {
                 pageStack.push(Qt.resolvedUrl("ContentPage.qml"), {
                                    u_owner: listUnitProxyModel.get(index).unitOwner,
                                    u_type: listUnitProxyModel.get(index).unitType,
-                                   u_name: listUnitProxyModel.get(index).unitName
+                                   u_name: listUnitProxyModel.get(index).unitName,
+                                   u_action: action
                                })
             }
 
@@ -209,13 +210,19 @@ Page {
                     MenuItem {
                         text: qsTr("Show content")
                         onClicked: {
-                            show_content()
+                            show_content("cat")
+                        }
+                    }
+                    MenuItem {
+                        text: qsTr("Show all available properties")
+                        onClicked: {
+                            show_content("show")
                         }
                     }
                 }
             }
             onClicked: {
-                show_content()
+                show_content("cat")
             }
         }
     }

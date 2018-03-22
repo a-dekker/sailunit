@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.sailunit.Launcher 1.0
+import "../common"
 
 Page {
     id: helpPage
@@ -11,6 +12,7 @@ Page {
     property string u_owner: ""
     property string u_type: ""
     property string u_name: ""
+    property string u_action: ""
     property string infoText
 
     App {
@@ -19,19 +21,31 @@ Page {
 
     function getFileInfo() {
         var user_cmd
+        var user_act
         if ( u_owner === "nemo" ) {
             user_cmd = "--user "
         } else {
             user_cmd = ""
         }
-        infoText = bar.launch("/bin/systemctl " + user_cmd + "cat " + u_name + '.' + u_type)
-        infoText = infoText.replace(/\[/g,'<b>[').replace(/\]/g,']</b>')
-        infoText = infoText.replace(/\n/gm, "<br>")
+        if ( u_action === "show") {
+            user_act = "show --all"
+        } else {
+            user_act = u_action
+        }
+        infoText = bar.launch("/bin/systemctl " + user_cmd + user_act + " " + u_name + '.' + u_type)
+        if (u_action === "cat") {
+            infoText = infoText.replace(/\[/g,'<b>[').replace(/\]/g,']</b>')
+        } else {
+            var re = /^(\w+)=/gm;
+            infoText = infoText.replace(re, '<b>$1</b>=')
+        }
+        infoText = infoText.replace(/\n/gm, '<br>')
     }
 
     Component.onCompleted: {
         getFileInfo()
     }
+
 
     SilicaFlickable {
         anchors.fill: parent
@@ -44,8 +58,13 @@ Page {
             id: col
             spacing: Theme.paddingLarge
             width: parent.width
-            PageHeader {
+
+            PageHeaderExtended {
+                id: pageHeader
                 title: qsTr(u_name + '.' + u_type)
+                subTitle: u_action === "cat" ? qsTr("content") : qsTr("all properties")
+                subTitleOpacity: 0.5
+                subTitleBottomMargin: isPortrait ? Theme.paddingSmall : -30
             }
             Label {
                 text: infoText

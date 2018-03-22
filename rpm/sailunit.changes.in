@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Thu Mar 22 2018 Arno Dekker <jack.tar@example.com> 0.0.1-3
+- Added option to show all properties of unitfile
 * Tue Jan 30 2018 Arno Dekker <jack.tar@example.com> 0.0.1-2
 - Fixed sorting/filtering
 * Mon Jan 29 2018 Arno Dekker <jack.tar@example.com> 0.0.1-1

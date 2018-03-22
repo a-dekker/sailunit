@@ -30,6 +30,19 @@
     </message>
 </context>
 <context>
+    <name>ContentPage</name>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>content</source>
+        <translation>inhoud</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>all properties</source>
+        <translation>alle eigenschappen</translation>
+    </message>
+</context>
+<context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
@@ -107,9 +120,14 @@
         <translation>Alles tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="210"/>
+        <location filename="../qml/pages/MainPage.qml" line="211"/>
         <source>Show content</source>
         <translation>Inhoud tonen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="217"/>
+        <source>Show all available properties</source>
+        <translation>Toon alle beschikbare eigenschappen</translation>
     </message>
 </context>
 <context>

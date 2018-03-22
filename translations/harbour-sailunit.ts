@@ -30,6 +30,19 @@
     </message>
 </context>
 <context>
+    <name>ContentPage</name>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>all properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainPage</name>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="70"/>
@@ -107,8 +120,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="210"/>
+        <location filename="../qml/pages/MainPage.qml" line="211"/>
         <source>Show content</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="217"/>
+        <source>Show all available properties</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
