@@ -219,6 +219,12 @@ Page {
                             show_content("show")
                         }
                     }
+                    MenuItem {
+                        text: qsTr("Show dependencies")
+                        onClicked: {
+                            show_content("list-dependencies")
+                        }
+                    }
                 }
             }
             onClicked: {

@@ -62,7 +62,7 @@ Page {
             PageHeaderExtended {
                 id: pageHeader
                 title: qsTr(u_name + '.' + u_type)
-                subTitle: u_action === "cat" ? qsTr("content") : qsTr("all properties")
+                subTitle: u_action === "cat" ? qsTr("content") : u_action === "list-dependencies" ? qsTr("dependencies") : qsTr("all properties")
                 subTitleOpacity: 0.5
                 subTitleBottomMargin: isPortrait ? Theme.paddingSmall : -30
             }

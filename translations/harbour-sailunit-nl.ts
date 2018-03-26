@@ -41,6 +41,11 @@
         <source>all properties</source>
         <translation>alle eigenschappen</translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>dependencies</source>
+        <translation>afhankelijkheden</translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -128,6 +133,11 @@
         <location filename="../qml/pages/MainPage.qml" line="217"/>
         <source>Show all available properties</source>
         <translation>Toon alle beschikbare eigenschappen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="223"/>
+        <source>Show dependencies</source>
+        <translation>Toon afhankelijkheden</translation>
     </message>
 </context>
 <context>

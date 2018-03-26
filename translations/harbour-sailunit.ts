@@ -41,6 +41,11 @@
         <source>all properties</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <source>dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -127,6 +132,11 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="217"/>
         <source>Show all available properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="223"/>
+        <source>Show dependencies</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
