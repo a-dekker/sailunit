@@ -125,17 +125,17 @@
         <translation>Alles tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="211"/>
+        <location filename="../qml/pages/MainPage.qml" line="212"/>
         <source>Show content</source>
         <translation>Inhoud tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="217"/>
+        <location filename="../qml/pages/MainPage.qml" line="218"/>
         <source>Show all available properties</source>
         <translation>Toon alle beschikbare eigenschappen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="223"/>
+        <location filename="../qml/pages/MainPage.qml" line="224"/>
         <source>Show dependencies</source>
         <translation>Toon afhankelijkheden</translation>
     </message>

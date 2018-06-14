@@ -184,7 +184,8 @@ Page {
                 anchors.left: stateRect.right
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.rightMargin: Theme.paddingSmall
-                text: unitName + " [" + unitType + "]"
+                text: Theme.highlightText(unitName, searchPanel.searchText, Theme.highlightColor) + " [" + unitType + "]"
+                textFormat: Text.StyledText
                 font.pixelSize: Theme.fontSizeSmall
                 width: parent.width - stateRect.width - Theme.paddingLarge
                 truncationMode: TruncationMode.Fade
