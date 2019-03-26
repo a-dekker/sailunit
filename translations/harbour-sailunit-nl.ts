@@ -32,17 +32,22 @@
 <context>
     <name>ContentPage</name>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <location filename="../qml/pages/ContentPage.qml" line="52"/>
         <source>content</source>
         <translation>inhoud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <location filename="../qml/pages/ContentPage.qml" line="56"/>
+        <source>unit status</source>
+        <translation>unit status</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="58"/>
         <source>all properties</source>
         <translation>alle eigenschappen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="65"/>
+        <location filename="../qml/pages/ContentPage.qml" line="54"/>
         <source>dependencies</source>
         <translation>afhankelijkheden</translation>
     </message>
@@ -138,6 +143,11 @@
         <location filename="../qml/pages/MainPage.qml" line="224"/>
         <source>Show dependencies</source>
         <translation>Toon afhankelijkheden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="230"/>
+        <source>Show status</source>
+        <translation>Toon status</translation>
     </message>
 </context>
 <context>

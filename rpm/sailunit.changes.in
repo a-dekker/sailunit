@@ -8,7 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Thu Mey 14 2018 Arno Dekker <jack.tar@example.com> 0.0.1-5
+* Tue Mar 14 2019 Arno Dekker <jack.tar@example.com> 0.0.1-6
+- Added 'show status' option
+* Thu May 14 2018 Arno Dekker <jack.tar@example.com> 0.0.1-5
 - Fixed handling of -.slice service
 * Thu Mar 26 2018 Arno Dekker <jack.tar@example.com> 0.0.1-4
 - Added option to show all dependencies of unitfile

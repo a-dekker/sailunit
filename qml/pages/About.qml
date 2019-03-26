@@ -69,7 +69,7 @@ Page {
                 visible: isPortrait || (largeScreen && screen.width > 1080)
             }
             Label {
-                text: "© Arno Dekker 2018"
+                text: "© Arno Dekker 2018-2019"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
