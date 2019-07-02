@@ -1,3 +1,5 @@
+
+
 /*
  * Copyright (C) 2015-2017 Alexey Rochev <equeim@gmail.com>
  *
@@ -14,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 
@@ -45,7 +46,8 @@ DockedPanel {
     }
 
     Behavior on opacity {
-        FadeAnimation { }
+        FadeAnimation {
+        }
     }
 
     Item {
@@ -63,7 +65,6 @@ DockedPanel {
                 verticalCenter: parent.verticalCenter
             }
             enabled: open
-
         }
 
         IconButton {

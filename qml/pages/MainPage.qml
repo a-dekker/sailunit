@@ -37,10 +37,10 @@ Page {
 
     function appendList(unitOwner, unitType, unitState, unitName) {
         listUnitModel.append({
-                                 unitOwner: unitOwner,
-                                 unitType: unitType,
-                                 unitState: unitState,
-                                 unitName: unitName
+                                 "unitOwner": unitOwner,
+                                 "unitType": unitType,
+                                 "unitState": unitState,
+                                 "unitName": unitName
                              })
     }
 
@@ -159,10 +159,13 @@ Page {
 
             function show_content(action) {
                 pageStack.push(Qt.resolvedUrl("ContentPage.qml"), {
-                                   u_owner: listUnitProxyModel.get(index).unitOwner,
-                                   u_type: listUnitProxyModel.get(index).unitType,
-                                   u_name: listUnitProxyModel.get(index).unitName,
-                                   u_action: action
+                                   "u_owner": listUnitProxyModel.get(
+                                                  index).unitOwner,
+                                   "u_type": listUnitProxyModel.get(
+                                                 index).unitType,
+                                   "u_name": listUnitProxyModel.get(
+                                                 index).unitName,
+                                   "u_action": action
                                })
             }
 
@@ -184,7 +187,9 @@ Page {
                 anchors.left: stateRect.right
                 anchors.leftMargin: Theme.paddingMedium
                 anchors.rightMargin: Theme.paddingSmall
-                text: Theme.highlightText(unitName, searchPanel.searchText, Theme.highlightColor) + " [" + unitType + "]"
+                text: Theme.highlightText(
+                          unitName, searchPanel.searchText,
+                          Theme.highlightColor) + " [" + unitType + "]"
                 textFormat: Text.StyledText
                 font.pixelSize: Theme.fontSizeSmall
                 width: parent.width - stateRect.width - Theme.paddingLarge

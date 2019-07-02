@@ -1,15 +1,10 @@
 #include "osread.h"
 #include <sys/types.h>
 
-Launcher::Launcher(QObject *parent) :
-    QObject(parent),
-    m_process(new QProcess(this))
-{
+Launcher::Launcher(QObject *parent)
+    : QObject(parent), m_process(new QProcess(this)) {}
 
-}
-
-QString Launcher::launch(const QString &program)
-{
+QString Launcher::launch(const QString &program) {
     m_process->start(program);
     m_process->waitForFinished(-1);
     QByteArray bytes = m_process->readAllStandardOutput();
@@ -17,6 +12,4 @@ QString Launcher::launch(const QString &program)
     return output;
 }
 
-Launcher::~Launcher() {
-
-}
+Launcher::~Launcher() {}

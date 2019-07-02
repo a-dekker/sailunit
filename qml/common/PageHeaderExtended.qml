@@ -1,3 +1,5 @@
+
+
 /***************************************************************************
 **
 ** Copyright (C) 2013 Marko Koschak (marko.koschak@tisno.de)
@@ -19,7 +21,6 @@
 ** along with ownKeepass. If not, see <http://www.gnu.org/licenses/>.
 **
 ***************************************************************************/
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
