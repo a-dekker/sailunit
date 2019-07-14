@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Jul 14 2019 Arno Dekker <jack.tar@example.com> 0.0.1-7
+- Load info async when possible
 * Tue Mar 14 2019 Arno Dekker <jack.tar@example.com> 0.0.1-6
 - Added 'show status' option
 * Thu May 14 2018 Arno Dekker <jack.tar@example.com> 0.0.1-5

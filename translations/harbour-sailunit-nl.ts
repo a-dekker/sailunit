@@ -55,97 +55,97 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="70"/>
+        <location filename="../qml/pages/MainPage.qml" line="75"/>
         <source> unit files</source>
         <translation> unit-bestanden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="99"/>
+        <location filename="../qml/pages/MainPage.qml" line="104"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="104"/>
+        <location filename="../qml/pages/MainPage.qml" line="109"/>
         <source>Show only system (root)</source>
         <translation>Enkel systeem (root) tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="105"/>
+        <location filename="../qml/pages/MainPage.qml" line="110"/>
         <source>Show only users (nemo)</source>
         <translation>Enkel gebruikers (nemo) tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="105"/>
+        <location filename="../qml/pages/MainPage.qml" line="110"/>
         <source>Show all users</source>
         <translation>Alle gebruikers tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="118"/>
+        <location filename="../qml/pages/MainPage.qml" line="123"/>
         <source>Show only services</source>
         <translation>Enkel diensten tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only sockets</source>
         <translation>Enkel sockets tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only targets</source>
         <translation>Enkel doelen tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only mounts</source>
         <translation>Enkel mounts tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only automounts</source>
         <translation>Enkel automounts tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only timers</source>
         <translation>Enkel timers tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only busnames</source>
         <translation>Enkel busnamen tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only slices</source>
         <translation>Enkel slices tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show only scopes</source>
         <translation>Enkel scopes tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Show all</source>
         <translation>Alles tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="212"/>
+        <location filename="../qml/pages/MainPage.qml" line="222"/>
         <source>Show content</source>
         <translation>Inhoud tonen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="218"/>
+        <location filename="../qml/pages/MainPage.qml" line="228"/>
         <source>Show all available properties</source>
         <translation>Toon alle beschikbare eigenschappen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="224"/>
+        <location filename="../qml/pages/MainPage.qml" line="234"/>
         <source>Show dependencies</source>
         <translation>Toon afhankelijkheden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="230"/>
+        <location filename="../qml/pages/MainPage.qml" line="240"/>
         <source>Show status</source>
         <translation>Toon status</translation>
     </message>
@@ -153,7 +153,7 @@
 <context>
     <name>sailunit</name>
     <message>
-        <location filename="../qml/common/SearchMenuItem.qml" line="22"/>
+        <location filename="../qml/common/SearchMenuItem.qml" line="23"/>
         <source>Search</source>
         <translation>Zoeken</translation>
     </message>

@@ -11,6 +11,7 @@ Page {
 
     App {
         id: bar
+        onMessageChanged: setUnitInfo(message)
     }
 
     property string unitName
@@ -19,11 +20,15 @@ Page {
     property string unitState
 
     function loadUnitInfo() {
-        var myElement
-        var unitString
-        var data = bar.launch(
+        bar.launch_async(
                     "/usr/share/harbour-sailunit/helper/sailunithelper.sh --listunits --units "
                     + mainapp.unit_type + " --owner " + mainapp.current_user)
+        listUnitModel.clear()
+    }
+
+    function setUnitInfo(data) {
+        var myElement
+        var unitString
         data = data.split('\n')
         for (var i = 0; i < data.length - 1; i++) {
             myElement = data[i].split(";")
