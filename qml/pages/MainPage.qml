@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.sailunit.Launcher 1.0
 import SortFilterProxyModel 0.2
@@ -12,6 +12,7 @@ Page {
     App {
         id: bar
         onMessageChanged: setUnitInfo(message)
+        onDoneChanged: busy_sign.running = false
     }
 
     property string unitName
@@ -20,6 +21,7 @@ Page {
     property string unitState
 
     function loadUnitInfo() {
+        busy_sign.running = true
         bar.launch_async(
                     "/usr/share/harbour-sailunit/helper/sailunithelper.sh --listunits --units "
                     + mainapp.unit_type + " --owner " + mainapp.current_user)
@@ -75,6 +77,14 @@ Page {
             subTitle: mainapp.unit_type + qsTr(" unit files")
             subTitleOpacity: 0.5
             subTitleBottomMargin: isPortrait ? Theme.paddingSmall : -30
+            BusyIndicator {
+                id: busy_sign
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.horizontalPageMargin
+                anchors.verticalCenter: parent.verticalCenter
+                size: BusyIndicatorSize.Small
+                running: false
+            }
         }
     }
 
@@ -100,6 +110,8 @@ Page {
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            id: menu
+            busy: busy_sign.running
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
@@ -128,7 +140,7 @@ Page {
                     loadUnitInfo()
                 }
             }
-            SearchMenuItem {
+           SearchMenuItem {
             }
         }
         VerticalScrollDecorator {

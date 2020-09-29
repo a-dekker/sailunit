@@ -8,6 +8,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Sep 29 2019 Arno Dekker <jack.tar@example.com> 0.0.1-9
+- Fix for Sailfish 3.4.0.22
+* Mon Jul 29 2019 Arno Dekker <jack.tar@example.com> 0.0.1-8
+- Show busy indicators while still loading
 * Sun Jul 14 2019 Arno Dekker <jack.tar@example.com> 0.0.1-7
 - Load info async when possible
 * Tue Mar 14 2019 Arno Dekker <jack.tar@example.com> 0.0.1-6

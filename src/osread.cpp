@@ -8,6 +8,7 @@ Launcher::Launcher(QObject *parent)
       m_process_async(new QProcess(this)) {}
 
 QString Launcher::message() const { return m_message; }
+int Launcher::done() { return m_code; }
 
 void Launcher::launch_async(const QString &program) {
     // Wait if another process is still running
@@ -17,6 +18,8 @@ void Launcher::launch_async(const QString &program) {
         std::cout << "Process did not start." << std::endl;
     }
     connect(m_process_async, SIGNAL(readyRead()), this, SLOT(setMessageCall()));
+    connect(m_process_async, SIGNAL(finished(int, QProcess::ExitStatus)), this,
+            SLOT(processFinished(int, QProcess::ExitStatus)));
 }
 
 QString Launcher::launch(const QString &program) {
@@ -29,7 +32,7 @@ QString Launcher::launch(const QString &program) {
 
 void Launcher::setMessageCall() {
     // We cannot have parameters, because readyRead has none
-    // But setMessage needs one argument, so have have this function first
+    // But setMessage needs one argument, so we have this function first
     if (m_process_async->bytesAvailable() > 0) {
         setMessage("dummy");
     }
@@ -40,6 +43,11 @@ void Launcher::setMessage(const QString &value) {
     m_message = QString::fromLocal8Bit(bytes);
     // std::cout << "[" << m_message.toStdString() << "]" << std::endl;
     outputReceived();
+}
+
+void Launcher::processFinished(int code, QProcess::ExitStatus status) {
+    m_code = code;
+    finishReceived();
 }
 
 Launcher::~Launcher() {}
