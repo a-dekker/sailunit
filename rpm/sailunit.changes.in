@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Fri Oct 02 2019 Arno Dekker <jack.tar@example.com> 0.0.1-10
+- Fix for Sailfish 3.4.0.22 the missing part
 * Tue Sep 29 2019 Arno Dekker <jack.tar@example.com> 0.0.1-9
 - Fix for Sailfish 3.4.0.22
 * Mon Jul 29 2019 Arno Dekker <jack.tar@example.com> 0.0.1-8

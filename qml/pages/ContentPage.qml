@@ -36,7 +36,7 @@ Page {
             user_act = u_action
         }
         infoText = bar.launch(
-                    "/bin/systemctl " + user_cmd + user_act + " -- " + u_name + '.' + u_type)
+                    "systemctl " + user_cmd + user_act + " -- " + u_name + '.' + u_type)
         if (u_action === "cat") {
             infoText = infoText.replace(/\[/g, '<b>[').replace(/\]/g, ']</b>')
         } else {
