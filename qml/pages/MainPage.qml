@@ -119,13 +119,13 @@ Page {
             MenuItem {
                 text: mainapp.current_user
                       === "all" ? qsTr("Show only system (root)") : mainapp.current_user
-                                  == "root" ? qsTr("Show only users (nemo)") : qsTr(
+                                  == "root" ? qsTr("Show only users") + " (" + username + ")" : qsTr(
                                                   "Show all users")
                 onClicked: {
                     mainapp.current_user
                             === "all" ? mainapp.current_user = "root" : mainapp.current_user
                                         == "root" ? mainapp.current_user
-                                                    = "nemo" : mainapp.current_user = "all"
+                                                    = username : mainapp.current_user = "all"
                     listUnitModel.clear()
                     loadUnitInfo()
                 }
@@ -220,7 +220,7 @@ Page {
                 anchors.left: stateRect.right
                 anchors.rightMargin: Theme.paddingSmall
                 anchors.leftMargin: Theme.paddingMedium
-                text: unitOwner === "nemo" ? "[user/" + unitOwner + "] " + unitState : "[system/"
+                text: unitOwner === username ? "[user/" + unitOwner + "] " + unitState : "[system/"
                                              + unitOwner + "] " + unitState
                 width: parent.width
                 truncationMode: TruncationMode.Fade

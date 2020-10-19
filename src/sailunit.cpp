@@ -63,6 +63,8 @@ int main(int argc, char* argv[]) {
     if (appinfo.bytesAvailable() > 0) {
         appversion = appinfo.readAll();
     }
+    QString username;
+    username = qgetenv("USER");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     QQuickView* view = SailfishApp::createView();
@@ -71,6 +73,7 @@ int main(int argc, char* argv[]) {
     // To display the view, call "show()" (will show fullscreen on device).
 
     view->rootContext()->setContextProperty("version", appversion);
+    view->rootContext()->setContextProperty("username", username);
     view->setSource(SailfishApp::pathTo("qml/sailunit.qml"));
     view->showFullScreen();
     return app->exec();

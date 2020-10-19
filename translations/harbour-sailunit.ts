@@ -71,7 +71,7 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="122"/>
-        <source>Show only users (nemo)</source>
+        <source>Show only users</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

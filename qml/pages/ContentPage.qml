@@ -23,7 +23,7 @@ Page {
     function getFileInfo() {
         var user_cmd
         var user_act
-        if (u_owner === "nemo") {
+        if (u_owner === username) {
             user_cmd = "--user "
         } else {
             user_cmd = ""
