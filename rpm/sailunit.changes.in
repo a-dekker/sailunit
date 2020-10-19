@@ -8,6 +8,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-12
+- Added reverse dependency lookup
 * Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-11
 - Do not assume username nemo by default
 * Fri Oct 02 2019 Arno Dekker <jack.tar@example.com> 0.0.1-10

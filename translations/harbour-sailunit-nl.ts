@@ -32,22 +32,27 @@
 <context>
     <name>ContentPage</name>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="52"/>
+        <location filename="../qml/pages/ContentPage.qml" line="54"/>
         <source>content</source>
         <translation>inhoud</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="56"/>
+        <location filename="../qml/pages/ContentPage.qml" line="58"/>
+        <source>reverse dependencies</source>
+        <translation>omgekeerde afhankelijkheden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ContentPage.qml" line="60"/>
         <source>unit status</source>
         <translation>unit status</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="58"/>
+        <location filename="../qml/pages/ContentPage.qml" line="62"/>
         <source>all properties</source>
         <translation>alle eigenschappen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ContentPage.qml" line="54"/>
+        <location filename="../qml/pages/ContentPage.qml" line="56"/>
         <source>dependencies</source>
         <translation>afhankelijkheden</translation>
     </message>
@@ -146,6 +151,11 @@
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="252"/>
+        <source>Show reverse dependencies</source>
+        <translation>Toon omgekeerde afhandelijkheden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="258"/>
         <source>Show status</source>
         <translation>Toon status</translation>
     </message>

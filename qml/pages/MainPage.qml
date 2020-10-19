@@ -1,4 +1,4 @@
-import QtQuick 2.2
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import harbour.sailunit.Launcher 1.0
 import SortFilterProxyModel 0.2
@@ -246,6 +246,12 @@ Page {
                         text: qsTr("Show dependencies")
                         onClicked: {
                             show_content("list-dependencies")
+                        }
+                    }
+                    MenuItem {
+                        text: qsTr("Show reverse dependencies")
+                        onClicked: {
+                            show_content("list-dependencies-reverse")
                         }
                     }
                     MenuItem {

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import harbour.sailunit.Launcher 1.0
 import "../common"
@@ -32,6 +32,8 @@ Page {
             user_act = "show --all"
         } else if (u_action === "status") {
             user_act = "status -l"
+        } else if (u_action === "list-dependencies-reverse") {
+            user_act = "list-dependencies --reverse"
         } else {
             user_act = u_action
         }
@@ -52,6 +54,8 @@ Page {
             return qsTr("content")
         case "list-dependencies":
             return qsTr("dependencies")
+        case "list-dependencies-reverse":
+            return qsTr("reverse dependencies")
         case "status":
             return qsTr("unit status")
         default:
