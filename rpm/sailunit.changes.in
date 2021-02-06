@@ -8,6 +8,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Feb 19 2021 Arno Dekker <jack.tar@example.com> 0.0.2-1
+- Removed busname type (obsolete in SFOS4)
+- Disable some menu items during loading
 * Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-12
 - Added reverse dependency lookup
 * Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-11

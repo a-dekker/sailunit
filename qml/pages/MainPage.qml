@@ -117,6 +117,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
             }
             MenuItem {
+                enabled: !busy_sign.running
                 text: mainapp.current_user
                       === "all" ? qsTr("Show only system (root)") : mainapp.current_user
                                   == "root" ? qsTr("Show only users") + " (" + username + ")" : qsTr(
@@ -131,11 +132,12 @@ Page {
                 }
             }
             MenuItem {
+                enabled: !busy_sign.running
                 text: mainapp.unit_type
                       === "all" ? qsTr("Show only services") : mainapp.unit_type
-                                  === "service" ? qsTr("Show only sockets") : mainapp.unit_type === "socket" ? qsTr("Show only targets") : mainapp.unit_type === "target" ? qsTr("Show only mounts") : mainapp.unit_type === "mount" ? qsTr("Show only automounts") : mainapp.unit_type === "automount" ? qsTr("Show only timers") : mainapp.unit_type === "timer" ? qsTr("Show only busnames") : mainapp.unit_type === "busname" ? qsTr("Show only slices") : mainapp.unit_type === "slice" ? qsTr("Show only scopes") : qsTr("Show all")
+                                  === "service" ? qsTr("Show only sockets") : mainapp.unit_type === "socket" ? qsTr("Show only targets") : mainapp.unit_type === "target" ? qsTr("Show only mounts") : mainapp.unit_type === "mount" ? qsTr("Show only automounts") : mainapp.unit_type === "automount" ? qsTr("Show only timers") : mainapp.unit_type === "timer" ? qsTr("Show only slices") : mainapp.unit_type === "slice" ? qsTr("Show only scopes") : qsTr("Show all")
                 onClicked: {
-                    mainapp.unit_type === "all" ? mainapp.unit_type = "service" : mainapp.unit_type === "service" ? mainapp.unit_type = "socket" : mainapp.unit_type === "socket" ? mainapp.unit_type = "target" : mainapp.unit_type === "target" ? mainapp.unit_type = "mount" : mainapp.unit_type === "mount" ? mainapp.unit_type = "automount" : mainapp.unit_type === "automount" ? mainapp.unit_type = "timer" : mainapp.unit_type === "timer" ? mainapp.unit_type = "busname" : mainapp.unit_type === "busname" ? mainapp.unit_type = "slice" : mainapp.unit_type === "slice" ? mainapp.unit_type = "scope" : mainapp.unit_type = "all"
+                    mainapp.unit_type === "all" ? mainapp.unit_type = "service" : mainapp.unit_type === "service" ? mainapp.unit_type = "socket" : mainapp.unit_type === "socket" ? mainapp.unit_type = "target" : mainapp.unit_type === "target" ? mainapp.unit_type = "mount" : mainapp.unit_type === "mount" ? mainapp.unit_type = "automount" : mainapp.unit_type === "automount" ? mainapp.unit_type = "timer" : mainapp.unit_type === "timer" ? mainapp.unit_type = "slice" : mainapp.unit_type === "slice" ? mainapp.unit_type = "scope" : mainapp.unit_type = "all"
                     listUnitModel.clear()
                     loadUnitInfo()
                 }
