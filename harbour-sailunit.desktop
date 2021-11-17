@@ -4,3 +4,6 @@ X-Nemo-Application-Type=silica-qt5
 Name=Sailunit
 Icon=harbour-sailunit
 Exec=harbour-sailunit
+
+[X-Sailjail]
+Sandboxing=Disabled

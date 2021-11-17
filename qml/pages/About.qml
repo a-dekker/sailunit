@@ -3,8 +3,6 @@ import Sailfish.Silica 1.0
 
 Page {
     id: aboutPage
-    allowedOrientations: Orientation.Portrait | Orientation.Landscape
-                         | Orientation.LandscapeInverted
     property bool largeScreen: screen.width > 540
 
     SilicaFlickable {

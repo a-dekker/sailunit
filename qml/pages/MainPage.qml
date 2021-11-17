@@ -6,8 +6,6 @@ import "../common"
 
 Page {
     id: mainPage
-    allowedOrientations: Orientation.Portrait | Orientation.Landscape
-                         | Orientation.LandscapeInverted
 
     App {
         id: bar

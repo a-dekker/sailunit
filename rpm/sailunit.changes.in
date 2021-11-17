@@ -8,9 +8,12 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Mon Feb 19 2021 Arno Dekker <jack.tar@example.com> 0.0.2-1
+* Fri Feb 05 2021 Arno Dekker <jack.tar@example.com> 0.0.3-1
+- Opt out of sailjail
+* Fri Feb 05 2021 Arno Dekker <jack.tar@example.com> 0.0.2-1
 - Removed busname type (obsolete in SFOS4)
-- Disable some menu items during loading
+- Disable some pulley menu items during loading
+- Some refactoring because Jolla decided to switch to inferior busybox bash in SFOS4
 * Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-12
 - Added reverse dependency lookup
 * Mon Oct 19 2019 Arno Dekker <jack.tar@example.com> 0.0.1-11

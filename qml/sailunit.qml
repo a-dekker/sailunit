@@ -29,7 +29,7 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import "pages"
 
@@ -37,6 +37,9 @@ ApplicationWindow {
     id: mainapp
     property string current_user: "all"
     property string unit_type: "all"
+
+    allowedOrientations: defaultAllowedOrientations
+    _defaultPageOrientations: defaultAllowedOrientations
 
     initialPage: Component {
         MainPage {

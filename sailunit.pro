@@ -76,4 +76,5 @@ INSTALLS += icon86 icon108 icon128 icon172 icon256 script
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+
 include(SortFilterProxyModel/SortFilterProxyModel.pri)
